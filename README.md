@@ -30,7 +30,7 @@ Using real-time crime heatmaps, geofencing alerts, and safe route planning, Path
 | :--- | :--- | :--- |
 | HTML, CSS, JavaScript | Node.js, Express.js | Folium (Python), Pandas |
 | Leaflet.js (maps) | REST APIs | Geolocation APIs |
-| Google Maps API | MongoDB (optional) | |
+| Google Maps API ||
 
 ---
 
