@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location-Based SOS</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&libraries=places"></script>
+
+    <script src="js/map.js"></script> <!-- Link to your map.js file -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #A78295;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #331D2C;
+            margin-bottom: 20px;
+        }
+
+        #map {
+            height: 60vh;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #showNearestPoliceButton {
+            background-color: #EFE1D1;
+            color: #331D2C;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: 2px solid #331D2C;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #showMyLocation {
+            background-color: #EFE1D1;
+            color: #331D2C;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: 2px solid #331D2C;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #showNearestPoliceButton:hover {
+            background-color: #331D2C;
+            color: #EFE1D1;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #showNearestPoliceButton:active {
+            transform: translateY(1px);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Location-Based SOS</h1>
+    <button id="showNearestPoliceButton" class="Police">Find Nearest Police Station</button>
+    <div id="map"></div>
+    <script>
+        window.onload = initMap;
+      </script>
+      
+   <script>
+    document.getElementById('showNearestPoliceButton').addEventListener('click', searchAndDisplayPoliceStations);
+  </script>
+
+
+</body>
+
+</html>
